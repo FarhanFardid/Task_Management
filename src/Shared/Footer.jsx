@@ -7,7 +7,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className=" grid md:grid-cols-3 bg-slate-900 md:p-12 p-5 text-white  ">
+    <footer className=" grid md:grid-cols-3 bg-slate-900 md:p-8 p-5 text-white  ">
       <div className=" items-center justify-center flex flex-col space-y-2">
         <img
           src={logo}
