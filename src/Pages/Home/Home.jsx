@@ -1,4 +1,5 @@
-import HomeBanner from "../HomeBanner";
+import Featured from "./Featured";
+import HomeBanner from "./HomeBanner";
 
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <div>
          
             <HomeBanner></HomeBanner>
+            <Featured></Featured>
         </div>
     );
 };
