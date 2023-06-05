@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import AddTask from "../Components/AddTask";
 import ViewTasks from "../Components/ViewTasks";
 import ManageTasks from "../Components/ManageTasks";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: "/manageTasks",
         element: <ManageTasks></ManageTasks>,
       },
+      {
+        path: '*',
+        element:<ErrorPage></ErrorPage>
+      }
     ],
   },
 ]);
