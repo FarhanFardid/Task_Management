@@ -14,6 +14,9 @@ const Navigation = () => {
       <li>
         <Link to="/viewTasks">View Tasks </Link>
       </li>
+      <li>
+        <Link to="/manageTasks">Manage Tasks </Link>
+      </li>
     </>
   );
   return (

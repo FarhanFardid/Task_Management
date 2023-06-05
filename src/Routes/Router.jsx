@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import AddTask from "../Components/AddTask";
 import ViewTasks from "../Components/ViewTasks";
+import ManageTasks from "../Components/ManageTasks";
 
 
 const router = createBrowserRouter([
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
             {
                 path:'viewTasks',
                 element:<ViewTasks></ViewTasks>
-            }
+            },
+            {
+                path:'/manageTasks',
+                element:<ManageTasks></ManageTasks>
+            },
         ]
     }
 ])
