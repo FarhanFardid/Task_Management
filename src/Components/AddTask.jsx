@@ -11,31 +11,26 @@ const AddTask = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    // const newTask = {
-    //   title: data.title,
-    //   description: data.description,
-    //   status: data.status,
-    // };
-    // console.log(newTask)
-    // fetch("http://localhost:5000/users", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(newTask),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (data.insertedId) {
-    //         reset();
-    //                 Swal.fire({
-    //                   title: "Success",
-    //                   text: "New Task Added to DB Successfully ",
-    //                   icon: "success",
-    //                   confirmButtonText: "Cool",
-    //                 });
-    //   }
-    // });
+
+    fetch("http://localhost:5000/tasks", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          reset();
+          Swal.fire({
+            title: "Success",
+            text: "New Task Added to DB Successfully ",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
 
   return (
