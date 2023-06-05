@@ -6,7 +6,7 @@ const useTask = () => {
         queryKey: ["tasks"],
        
         queryFn: async ()=>{
-            const response = await fetch("http://localhost:5000/tasks")
+            const response = await fetch("https://task-management-back-end-beta.vercel.app/tasks")
             // console.log(response)
             return response.json()
         },

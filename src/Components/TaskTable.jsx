@@ -15,7 +15,7 @@ const TaskTable = ({ index, item, refetch }) => {
       confirmButtonText: "Yes, Update it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/tasks/${id}`, {
+        fetch(`https://task-management-back-end-beta.vercel.app/tasks/${id}`, {
           method: "PATCH",
           headers: {
             "content-type": "application/json",
@@ -54,7 +54,7 @@ const TaskTable = ({ index, item, refetch }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/tasks/${id}`, {
+        fetch(`https://task-management-back-end-beta.vercel.app/tasks/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",
