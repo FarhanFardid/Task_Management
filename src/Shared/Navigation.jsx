@@ -49,7 +49,7 @@ const Navigation = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-800  rounded-box w-52 font-bold"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-500  rounded-box w-52 font-bold z-10"
           >
             {navOptions}
           </ul>

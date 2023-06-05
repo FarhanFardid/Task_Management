@@ -88,7 +88,7 @@ const TaskTable = ({ index, item, refetch }) => {
         <td>
           <button
             onClick={() => handleUpdate(_id)}
-            className="btn btn-sm bg-green-700 text-white hover:bg-green-950 p-1 h-10"
+            className="btn btn-xs md:btn-md bg-green-700 text-white hover:bg-green-950 p-1 h-10"
           >
             Mark as Completed
           </button>

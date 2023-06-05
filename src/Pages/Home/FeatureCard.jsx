@@ -7,10 +7,10 @@ const FeatureCard = ({title,content,btnTag}) => {
           <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
         </figure> */}
         <div className="card-body items-center text-center">
-          <h2 className="card-title">{title}</h2>
-          <p>{content}</p>
+          <h2 className="card-title md:text-xl text-sm">{title}</h2>
+          <p className="md:text-lg text-xs">{content}</p>
           <div className="card-actions">
-            <button className="btn bg-slate-800 text-white hover:bg-slate-600">{btnTag}</button>
+            <button className="btn md:btn-md btn-xs bg-slate-800 text-white hover:bg-slate-600">{btnTag}</button>
           </div>
         </div>
       </div>

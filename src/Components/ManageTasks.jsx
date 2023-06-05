@@ -6,19 +6,19 @@ const ManageTasks = () => {
   return (
     <div>
       <div
-        className="hero h-[350px]"
+        className="hero md:h-[350px] h-[250px]"
         style={{ backgroundImage: `url(${taskBanner})` }}
       >
         <div className="hero-overlay bg-opacity-30"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold text-slate-900 bg-white p-2 rounded-lg bg-opacity-30">
+            <h1 className="mb-5 md:text-5xl text-2xl font-bold text-slate-900 bg-white p-2 rounded-lg bg-opacity-30">
               Manage Tasks
             </h1>
           </div>
         </div>
       </div>
-      <h2 className="text-2xl font-bold text-center py-3 text-black">
+      <h2 className=" md:text-2xl text-lg font-bold text-center  md:py-3 py-1 text-black">
         Total Tasks: {task.length}
       </h2>
 
