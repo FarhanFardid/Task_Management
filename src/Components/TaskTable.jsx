@@ -1,34 +1,41 @@
-import { FaArrowCircleUp, FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const TaskTable = ({ index, item, refetch }) => {
   const { _id, title, description, status } = item;
-  
-  const handleUpdate = (id) =>{
+
+  const handleUpdate = (id) => {
     Swal.fire({
-      title: "Remove From Task List?",
+      title: "Mark Task As Completed?",
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Yes, Update it!",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/tasks/${id}`, {
-          method: "DELETE",
+          method: "PATCH",
           headers: {
             "content-type": "application/json",
           },
         })
           .then((res) => res.json())
           .then((data) => {
-            if (data.deletedCount > 0) {
+            console.log(data);
+            if (data.modifiedCount > 0) {
               refetch();
               Swal.fire(
-                "Deleted!",
-                "Task has been deleted from List.",
+                "Updated!",
+                "Task has been marked as completed.",
                 "success"
+              );
+            } else {
+              Swal.fire(
+                "Error!",
+                "Task has already been completed.",
+                "warning"
               );
             }
           });
@@ -81,10 +88,9 @@ const TaskTable = ({ index, item, refetch }) => {
         <td>
           <button
             onClick={() => handleUpdate(_id)}
-            className="btn  btn-sm bg-green-700 text-white hover:bg-green-950"
+            className="btn btn-sm bg-green-700 text-white hover:bg-green-950 p-1 h-10"
           >
             Mark as Completed
-            <FaArrowCircleUp />
           </button>
         </td>
         <td>
