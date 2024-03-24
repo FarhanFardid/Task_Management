@@ -9,4 +9,6 @@ i. Add New Tasks: Users can add new tasks to the task list by providing details 
 
 ii. Update Task Status: Users can update the status of tasks, marking them as in progress, completed, or any other custom status as required.
 
-iii. Remove Completed Tasks: Completed tasks can be removed from the task list to declutter and maintain a clear overview of pending tasks.
+iii. View Task: Users can view all the added task with their status.
+
+iv. Remove Completed Tasks: Completed tasks can be removed from the task list to declutter and maintain a clear overview of pending tasks.
