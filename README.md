@@ -1,9 +1,9 @@
 
 # Task Management
 
-Task Management is a full-stack project designed to help users manage their tasks effectively. It enables users to add new tasks, update the status of tasks, and remove tasks upon completion.
+## Task Management is a full-stack project designed to help users manage their tasks effectively. It enables users to add new tasks, update the status of tasks, and remove tasks upon completion.
 
-Features:
+### Features:
 
 i. Add New Tasks: Users can add new tasks to the task list by providing details such as task name, description, deadline, etc.
 
